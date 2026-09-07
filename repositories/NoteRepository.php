@@ -19,7 +19,7 @@ class NoteRepository {
 
     public function find(int $id, int $userId): ?Note {
         $stmt = $this->db->prepare("SELECT * FROM notes WHERE id = ? AND user_id = ?");
-        $stmt->execute([$id, $userId);
+        $stmt->execute([$id, $userId]);
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
         if ($row) {
             return new Note($row['id'], $row['title'], $row['content']);

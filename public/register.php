@@ -1,5 +1,6 @@
 <?php
-require_once '/../includes/bootstrap.php';
+/** @var UserRepository $userRepo */
+require_once '../includes/bootstrap.php';
 
 $error = '';
 
@@ -26,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <h2>Daftar</h2>
     <?php if($error != ''): ?>
         <p style="color: red;"><?= $error?></p>
-    <php endif; ?>
+    <?php endif; ?>
 
     <form method="POST">
         <input type="text" name="username" placeholder="Masukkan username anda...">

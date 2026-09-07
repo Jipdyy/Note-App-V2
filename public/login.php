@@ -1,4 +1,5 @@
 <?php
+/** @var UserRepository $userRepo */
 require_once '../includes/bootstrap.php';
 
 $error = '';
